@@ -123,7 +123,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
             return [NSString stringWithFormat:@"%@", [df stringFromDate:[gregorian dateFromComponents:comps]]];
         }
         case 1:
-            return [NSString stringWithFormat:@"%@", years[row]];
+            return [NSString stringWithFormat:@"%@年", years[row]];
         default:
             return nil;
     }
