@@ -13,8 +13,8 @@
 #define DEFAULT_YEAR_SIZE 408
 #define DEFAULT_MONTH_SIZE 3000
 
-#define MONTH_INDEX = 1
-#define YEAR_INDEX = 0
+#define MONTH_INDEX 1
+#define YEAR_INDEX 0
 
 @interface RNMonthPicker() <UIPickerViewDataSource, UIPickerViewDelegate>
 @end
