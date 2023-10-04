@@ -92,8 +92,8 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
 
 - (void)setSelectedRows:(BOOL)animated {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self selectRow:selectedMonthRow inComponent:1 animated:animated];
-        [self selectRow:selectedYearRow inComponent:0 animated:animated];
+        [self selectRow:selectedMonthRow inComponent:MONTH_INDEX animated:animated];
+        [self selectRow:selectedYearRow inComponent:YEAR_INDEX animated:animated];
     });
 }
 
@@ -126,7 +126,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
             return [NSString stringWithFormat:@"%@", [df stringFromDate:[gregorian dateFromComponents:comps]]];
         }
         case YEAR_INDEX:
-            return [NSString stringWithFormat:@"%@", years[row]];
+            return [NSString stringWithFormat:@"%@年", years[row]];
         default:
             return nil;
     }
